@@ -1,16 +1,20 @@
+#pragma once
+
 #include <string>
 
 class Cutie {
   private:
     std::string description;
-    int cuteness_rating;
+    int cutenessRating;
 
   public:
-    Cutie(std::string description, int cuteness_rating) {
+    Cutie(std::string description, int cutenessRating) {
       this->description = description;
-      this->cuteness_rating = cuteness_rating;
+      this->cutenessRating = cutenessRating;
     }
 
-    virtual std::string get_description() = 0;
-    virtual int get_cuteness_rating() = 0;
-}
+    virtual ~Cutie() = default;
+
+    virtual std::string getDescription() = 0;
+    virtual int getCutenessRating() = 0;
+};
